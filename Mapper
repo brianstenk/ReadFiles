@@ -6,3 +6,17 @@
 			for(String str : readItems) {
 				System.out.println(str);
 			}
+Map<String, String> origMap = new HashMap<String, String>();
+		//KStreamBuilder builder = new KStreamBuilder();
+		
+		origMap.put("Bosco", "Bosco Kamala");
+		origMap.put("John", "John Garanga");
+		origMap.put("Chear", "Chear Kamudini");
+		
+		Set<Map.Entry<String, String>> entries = origMap.entrySet();
+				 
+		Stream<Map.Entry<String, String>> entriesStream = entries.stream();
+		
+		entriesStream.forEach(entry ->System.out.println(
+				entry.getKey().length()+" "+entry.getValue())
+				);
