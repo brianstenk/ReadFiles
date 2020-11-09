@@ -1,0 +1,8 @@
+		String dataPath = "src/main/resources/file";
+		ObjectMapper mapper = new ObjectMapper();
+		try {
+			String[] readItems = mapper.readValue(new File(dataPath), String[].class);
+			//readItems.forEach(str -> System.out.println(str));
+			for(String str : readItems) {
+				System.out.println(str);
+			}
